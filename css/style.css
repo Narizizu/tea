@@ -5,6 +5,7 @@ html {
 *,
 *::after,
 *::before {
+    margin: 0;
     box-sizing: inherit;
 }
 
@@ -23,6 +24,13 @@ ul {
     list-style: none;
 }
 
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Cormorant', serif;
+    font-size: 40px;
+    font-weight: 400;
+}
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -151,7 +159,48 @@ body {
     margin: 150px auto;
 }
 
+.assortment {
+    margin-bottom: 150px;
+}
+
+.assortment__list {
+    text-align: center;
+    display: flex;
+    gap: 0 40px;
+}
+
+.assortment__img {
+    max-width: 208px;
+    max-height: 208px;
+    width: 100%;
+}
+
+.assortment__name {
+    padding-top: 10px;
+    font-family: 'Cormorant', serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1000px) {
+    .title {
+        margin-bottom: 30px;
+    }
     .user-actions__item-search {
         margin-left: 30px;
     }
@@ -170,6 +219,15 @@ body {
     .blockquote__text {
         margin-top: 120px;
         margin-bottom: 135px;
+    }
+    .assortment {
+        margin-bottom: 120px;
+    }
+    .assortment__list {
+        gap: 0;
+    }
+    .open {
+        background-color: #000;
     }
 }
 @media (max-width: 860px) {
@@ -251,28 +309,31 @@ body {
         margin-top: 60px;
         margin-bottom: 60px;
     }
-
+    .assortment__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 @media (max-width: 680px) {
-    container {
-        padding-left: 0px;
-        padding-right: 0px;
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .header__inner {
-        padding-left: 64px;
-        padding-right: 64px;
+        padding-left: 0;
+        padding-right: 0;
     }
     .top__title{
         font-size: 40px;
         line-height: normal;
     }
+}
     .blockquote__text {
         font-size: 16px;
         max-width: 376px;
         margin-top: 60px;
         margin-bottom: 60px;
     }
-}
 @media (max-width: 480px) {
     .logo {
         margin-right: 80px;
@@ -283,8 +344,14 @@ body {
     .menu__list {
         width: 360px;
     }
+    .assortment {
+        margin-bottom: 60px;
+    }
 }
 @media (max-width: 360px) {
+    .title {
+        margin-bottom: 10px;
+    }
     .logo {
         margin-right: 50px;
     }
@@ -296,7 +363,7 @@ body {
     }
     .top__title {
         font-size: 24px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
     .top__text {
         font-size: 13px;
@@ -308,6 +375,12 @@ body {
     .blockquote__text {
         max-width: 340px;
         margin-top: 70px;
+        margin-bottom: 80px;
+    }
+    .assortment__img {
+        max-width: 170px;
+    }
+    .assortment {
         margin-bottom: 80px;
     }
 }
